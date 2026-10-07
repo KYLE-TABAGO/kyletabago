@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GoRide - Transportation App</title>
+</head>
+<body id="top">
+
+<header>
+<h1>GoRide</h1>
+<p><em>Your reliable urban transportation partner.</em></p>
+<nav>
+<a href="#book">Book a Ride</a>  
+<a href="#fleet">Our Vehicles</a> 
+<a href="#map">Map</a>  
+<a href="#media">Media</a> 
+<a href="#schedule">Schedule</a>  
+<a href="#contact">Contact</a>
+</nav>
+</header><hr>
+
+<main>
+
+<section id="book">
+<h2>Book a Ride</h2>
+<form action="#" method="post">
+<fieldset><legend>Trip Details</legend>
+
+<label>Full Name: <input type="text" name="name" required placeholder="Kyle Tabago"></label><br>
+<label>Phone: <input type="tel" name="phone" required placeholder="09XXXXXXXXX"></label><br>
+<label>Email: <input type="email" name="email" placeholder="goride@email.com"></label><br>
+
+<label>Pick-up: <input list="places" name="pickup" required></label><br>
+<label>Drop-off: <input list="places" name="dropoff" required></label>
+<datalist id="places">
+<option>Central Terminal</option><option>City Hall</option>
+<option>Airport</option><option>University</option><option>Public Market</option>
+</datalist><br>
+
+<label>Date: <input type="date" name="date" required></label>
+<label>Time: <input type="time" name="time" required></label><br>
+
+<label>Passengers: <input type="number" name="passengers" min="1" max="10" value="1"></label><br>
+
+<label>Vehicle:
+<select name="vehicle">
+<option>Taxi</option><option>Van</option><option>Shuttle Bus</option>
+<option>Motorcycle Taxi</option><option>Tricycle</option>
+</select></label><br>
+
+Payment:
+<label><input type="radio" name="pay" value="cash" checked>Cash</label>
+<label><input type="radio" name="pay" value="card">Card</label>
+<label><input type="radio" name="pay" value="wallet">E-Wallet</label><br>
+
+Extras:
+<label><input type="checkbox" name="extra" value="luggage">Extra Luggage</label>
+<label><input type="checkbox" name="extra" value="child">Child Seat</label>
+<label><input type="checkbox" name="extra" value="wheelchair">Wheelchair</label><br>
+
+<label>Notes:<br><textarea name="notes" rows="3" cols="40" placeholder="Notes for the driver"></textarea></label><br>
+
+<label><input type="checkbox" required> I agree to the
+<a href="#terms-info">Terms & Conditions</a></label><br><br>
+
+<button type="submit">Book Now</button>
+<button type="reset">Clear</button>
+</fieldset>
+</form>
+</section><hr>
+
+<section id="fleet">
+<h2>Our Vehicles</h2>
+<figure>
+<img src="lambo.jpg" alt="Taxi" width="400" height="250">
+<figcaption><strong>Taxi</strong> - Fast city transportation.</figcaption>
+</figure>
+<figure>
+<img src="foton-traveller-xl-white-press-photo-5dd4f2e7cecbb.jpg" alt="Van" width="400" height="250">
+<figcaption><strong>Van</strong> - Comfortable group travel.</figcaption>
+</figure>
+<figure>
+<img src="OIP.webp" alt="Shuttle Bus" width="400" height="250">
+<figcaption><strong>Shuttle Bus</strong> - Affordable public transport.</figcaption>
+</figure>
+<small>Placeholder images may be replaced with real photos.</small>
+</section><hr>
+
+
+<map name="route">
+<area shape="rect" coords="0,0,200,300" href="#schedule" alt="Terminal">
+<area shape="rect" coords="200,0,400,300" href="#schedule" alt="City Hall">
+<area shape="rect" coords="400,0,600,300" href="#schedule" alt="Airport">
+</map>
+</section><hr>
+
+<section id="media">
+<h2>Media</h2>
+
+<h3>How GoRide Works (Video)</h3>
+<video width="480" controls poster="">
+<source src="" type="video/mp4">
+<source src="" type="video/ogg">
+Your browser does not support video.
+</video>
+
+<h3>Driver Announcement (Audio)</h3>
+<audio controls>
+<source src="" type="audio/mpeg">
+<source src="" type="audio/ogg">
+Your browser does not support audio.
+</audio>
+
+<h3>Watch on YouTube (Embedded)</h3>
+<iframe width="480" height="270"
+src="watch.htm"
+title="YouTube video" allowfullscreen></iframe>
+</section><hr>
+
+<section id="schedule">
+<h2>Shuttle Schedule</h2>
+<table border="3" cellpadding="9" cellspacing="0">
+<caption>Daily departures from Central Terminal</caption>
+<thead>
+<tr><th>Route</th><th>Departure</th><th>Arrival</th><th>Fare</th></tr>
+</thead>
+<tbody>
+<tr><td>Terminal → City Hall</td><td>8:00 AM</td><td>8:20 AM</td><td>₱20</td></tr>
+<tr><td>Terminal → University</td><td>9:00 AM</td><td>9:30 AM</td><td>₱25</td></tr>
+<tr><td>Terminal → Airport</td><td>10:00 AM</td><td>10:40 AM</td><td>₱40</td></tr>
+<tr><td>Terminal → Public Market</td><td>11:00 AM</td><td>11:20 AM</td><td>₱20</td></tr>
+</tbody>
+</table>
+
+<h3>Check Your Route</h3>
+<form method="get">
+<label>Route:
+<select name="route">
+<option>Terminal → City Hall</option>
+<option>Terminal → University</option>
+<option>Terminal → Airport</option>
+<option>Terminal → Public Market</option>
+</select></label>
+<button type="submit">Search</button>
+</form>
+</section><hr>
+
+<section id="contact">
+<h2>Contact & Feedback</h2>
+<form enctype="multipart/form-data">
+<fieldset><legend>Send Feedback</legend>
+<label>Your name: <input type="text" name="name"></label><br>
+<label>Rate your ride:
+<input type="range" name="rating" min="1" max="5" value="5"></label><br>
+<label>Topic:
+<select name="topic">
+<option>Compliment</option><option>Complaint</option>
+<option>Lost Item</option><option>Suggestion</option>
+</select></label><br>
+<label>Message:<br><textarea name="message" rows="4" cols="40" required></textarea></label><br>
+<label>Attach a photo: <input type="file" name="photo" accept="image/*"></label><br>
+<button type="submit">Send Feedback</button>
+</fieldset>
+</form>
+
+<h3>Reach Us</h3>
+<address>
+GoRide Transportation<br>
+Central Terminal, Baguio, La Trinidad<br>
+Phone: <a href="tel:+639XXXXXXXXX">09XXXXXXXXX</a><br>
+Email: <a href="goride@example.com">goride@example.com</a>
+</address>
+</section><hr>
+
+<section id="links">
+<h2>Useful Links</h2>
+<ul>
+<li><a href="" target="_blank">OpenStreetMap</a></li>
+<li><a href="" target="_blank">Google Maps</a></li>
+<li><a href="" target="_blank">Facebook</a></li>
+<li><a href="#top">Back to top</a></li>
+</ul>
+</section>
+
+<section id="terms-info">
+<h2>Terms & Conditions</h2>
+<details>
+<summary>Read the terms</summary>
+<ol>
+<li>Passengers must provide accurate booking information.</li>
+<li>Bookings are subject to vehicle availability.</li>
+<li>Passengers must follow GoRide safety rules.</li>
+</ol>
+</details>
+</section>
+
+</main>
+
+<footer>
+<hr>
+<p>&copy; 2026 GoRide Transportation. All rights reserved. Tabago, Kyle Patrick L.</p>
+</footer>
+
+</body>
+</html>
