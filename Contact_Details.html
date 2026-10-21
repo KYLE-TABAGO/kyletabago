@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Midterm Portfolio</title>
+    
+    <hr class="header‑divider">
+    <div class="card‑container">
+      <h1>Contact Details</h1>
+      <form action="https://httpbin.org/post" method="POST">
+        <fieldset>
+          <legend>Contact Form</legend>
+          <p>
+            <label for="fullname">Full Name *</label><br>
+            <input id="fullname" type="text" name="fullname" required>
+          </p>
+          <p>
+            <label for="email">Email Address *</label><br>
+            <input id="email" type="email" name="email" required>
+          </p>
+          <p>
+            <label for="topic">Inquiry Topic *</label><br>
+            <select id="topic" name="topic" required>
+              <option value="">‑ Select Inquiry Type ‑</option>
+              <option value="web‑dev">Web‑Development Inquiry</option>
+              <option value="consult">Design Consultation</option>
+            </select>
+          </p>
+          <p>
+            <label for="msg">Message *</label><br>
+            <textarea id="msg" name="msg" minlength="3" required rows="4"></textarea>
+          </p>
+          <p><button type="submit">Send Message</button></p>
+        </fieldset>
+      </form>
+    </div>
+    <hr class="footer‑divider">
+    <footer>© Developed by Kyle ‑ Human‑Computer Interaction</footer>
+  </body>
+  </html>
+  
